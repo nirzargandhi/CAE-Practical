@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E693D80E2770A9A60025C6FA /* RosterDutyDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E693D80D2770A9A60025C6FA /* RosterDutyDetailVC.swift */; };
 		E6D321AE27704B230067B760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6D321AD27704B230067B760 /* Main.storyboard */; };
 		E6D321E827704B500067B760 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D321B327704B500067B760 /* ApiCall.swift */; };
 		E6D321E927704B500067B760 /* MultiPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D321B427704B500067B760 /* MultiPart.swift */; };
@@ -49,7 +50,9 @@
 		E6D3220E27704B500067B760 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D321E427704B500067B760 /* NotificationDelegate.swift */; };
 		E6D3220F27704B500067B760 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D321E527704B500067B760 /* Utility.swift */; };
 		E6D3221027704B500067B760 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6D321E727704B500067B760 /* Color.xcassets */; };
-		E6D3221527704DB70067B760 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D3221427704DB70067B760 /* DashboardVC.swift */; };
+		E6D3221527704DB70067B760 /* RosterDutiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D3221427704DB70067B760 /* RosterDutiesVC.swift */; };
+		E6D322182770590D0067B760 /* RosterDutiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D322172770590D0067B760 /* RosterDutiesModel.swift */; };
+		E6D3221B27706A550067B760 /* RosterDutiesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D3221A27706A550067B760 /* RosterDutiesTVC.swift */; };
 		E6E3F99027703DAB006B0D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E3F98F27703DAB006B0D26 /* AppDelegate.swift */; };
 		E6E3F99927703DAD006B0D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6E3F99827703DAD006B0D26 /* Assets.xcassets */; };
 		E6E3F99C27703DAD006B0D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E3F99A27703DAD006B0D26 /* LaunchScreen.storyboard */; };
@@ -80,6 +83,7 @@
 		24D6F5A527CEBBA2002530D6 /* Pods-CAE-Practical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAE-Practical.debug.xcconfig"; path = "Target Support Files/Pods-CAE-Practical/Pods-CAE-Practical.debug.xcconfig"; sourceTree = "<group>"; };
 		8CF9D44631F7B8EE016FC6E1 /* Pods_CAE_Practical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CAE_Practical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939C135AF6FF9EB8B45A73BC /* Pods-CAE-Practical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAE-Practical.release.xcconfig"; path = "Target Support Files/Pods-CAE-Practical/Pods-CAE-Practical.release.xcconfig"; sourceTree = "<group>"; };
+		E693D80D2770A9A60025C6FA /* RosterDutyDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterDutyDetailVC.swift; sourceTree = "<group>"; };
 		E6D321AD27704B230067B760 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E6D321B327704B500067B760 /* ApiCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 		E6D321B427704B500067B760 /* MultiPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPart.swift; sourceTree = "<group>"; };
@@ -124,7 +128,9 @@
 		E6D321E527704B500067B760 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		E6D321E727704B500067B760 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		E6D3221127704B930067B760 /* CAE-Practical-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAE-Practical-Bridging-Header.h"; sourceTree = "<group>"; };
-		E6D3221427704DB70067B760 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		E6D3221427704DB70067B760 /* RosterDutiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterDutiesVC.swift; sourceTree = "<group>"; };
+		E6D322172770590D0067B760 /* RosterDutiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterDutiesModel.swift; sourceTree = "<group>"; };
+		E6D3221A27706A550067B760 /* RosterDutiesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterDutiesTVC.swift; sourceTree = "<group>"; };
 		E6E3F98C27703DAB006B0D26 /* CAE-Practical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CAE-Practical.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E3F98F27703DAB006B0D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E3F99827703DAD006B0D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +184,14 @@
 				939C135AF6FF9EB8B45A73BC /* Pods-CAE-Practical.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E693D80C2770A98E0025C6FA /* Roster Duty Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E693D80D2770A9A60025C6FA /* RosterDutyDetailVC.swift */,
+			);
+			path = "Roster Duty Detail";
 			sourceTree = "<group>";
 		};
 		E6D321AC27704B070067B760 /* Designs */ = {
@@ -337,17 +351,36 @@
 		E6D3221227704DA10067B760 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E6D3221327704DA70067B760 /* Dashboard */,
+				E6D3221327704DA70067B760 /* Roster Duties */,
+				E693D80C2770A98E0025C6FA /* Roster Duty Detail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		E6D3221327704DA70067B760 /* Dashboard */ = {
+		E6D3221327704DA70067B760 /* Roster Duties */ = {
 			isa = PBXGroup;
 			children = (
-				E6D3221427704DB70067B760 /* DashboardVC.swift */,
+				E6D3221927706A400067B760 /* Cell */,
+				E6D32216277058BB0067B760 /* Model */,
+				E6D3221427704DB70067B760 /* RosterDutiesVC.swift */,
 			);
-			path = Dashboard;
+			path = "Roster Duties";
+			sourceTree = "<group>";
+		};
+		E6D32216277058BB0067B760 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6D322172770590D0067B760 /* RosterDutiesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6D3221927706A400067B760 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E6D3221A27706A550067B760 /* RosterDutiesTVC.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E6E3F98327703DAB006B0D26 = {
@@ -594,6 +627,7 @@
 				E6D3220227704B500067B760 /* UITableViewVibrantCell.swift in Sources */,
 				E6D321FF27704B500067B760 /* UISideMenuNavigationController.swift in Sources */,
 				E6D321FD27704B500067B760 /* UIImageExtension.swift in Sources */,
+				E6D322182770590D0067B760 /* RosterDutiesModel.swift in Sources */,
 				E6D321F227704B500067B760 /* UITextFieldExtension.swift in Sources */,
 				E6D321FC27704B500067B760 /* OptionalExtensions.swift in Sources */,
 				E6D321F327704B500067B760 /* DictionaryExtensions.swift in Sources */,
@@ -602,7 +636,7 @@
 				E6D321EC27704B500067B760 /* ArrayExtensions.swift in Sources */,
 				E6D321F527704B500067B760 /* URLExtension.swift in Sources */,
 				E6D321EB27704B500067B760 /* UIButtonExtension.swift in Sources */,
-				E6D3221527704DB70067B760 /* DashboardVC.swift in Sources */,
+				E6D3221527704DB70067B760 /* RosterDutiesVC.swift in Sources */,
 				E6D3220327704B500067B760 /* ConnectionCheck.swift in Sources */,
 				E6D321F627704B500067B760 /* Extension.swift in Sources */,
 				E6D321F127704B500067B760 /* ColorChange.swift in Sources */,
@@ -618,6 +652,8 @@
 				E6D3220E27704B500067B760 /* NotificationDelegate.swift in Sources */,
 				E6D3220F27704B500067B760 /* Utility.swift in Sources */,
 				E6D321EE27704B500067B760 /* FloatExtensions.swift in Sources */,
+				E6D3221B27706A550067B760 /* RosterDutiesTVC.swift in Sources */,
+				E693D80E2770A9A60025C6FA /* RosterDutyDetailVC.swift in Sources */,
 				E6D321F927704B500067B760 /* MonthYearPickerView.swift in Sources */,
 				E6D321EA27704B500067B760 /* JsonSerializer.swift in Sources */,
 				E6D321FE27704B500067B760 /* Constants.swift in Sources */,

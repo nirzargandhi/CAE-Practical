@@ -43,7 +43,7 @@ class MultiPart: NSObject {
             if let data = data {
                 let decoder = JSONDecoder()
                 do {
-                    if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                    if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: []) as? NSArray {
                         print(convertedJsonIntoDict)
                     }
                     
@@ -53,9 +53,8 @@ class MultiPart: NSObject {
                             completion(true, dictResponse as AnyObject)
                         }
                     } else {
-                        let dictResponse = try decoder.decode(GeneralResponseModal.self, from: data)
                         mainThread {
-                            completion(false, dictResponse.status_message as AnyObject)
+                            completion(false, AlertMessage.msgError as AnyObject)
                         }
                     }
                     

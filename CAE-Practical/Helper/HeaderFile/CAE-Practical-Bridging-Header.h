@@ -18,6 +18,7 @@
 @import SystemConfiguration;
 @import UIKit;
 
+@import FontAwesome_swift;
 @import IQKeyboardManagerSwift;
 @import MBProgressHUD;
 @import SDWebImage;

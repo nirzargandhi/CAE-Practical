@@ -8,6 +8,7 @@ extension UIColor {
     class func appDarkCyan() -> UIColor { return UIColor(named: "AppDarkCyan")! }
     class func appGray() -> UIColor { return UIColor(named: "AppGray")! }
     class func appOffWhite() -> UIColor { return UIColor(named: "AppOffWhite")! }
+    class func appRed() -> UIColor { return UIColor(named: "AppRed")! }
     class func appWhite() -> UIColor { return UIColor(named: "AppWhite")! }
 }
 
@@ -30,13 +31,15 @@ enum AllStoryBoard {
 //MARK: - ViewController Names
 enum ViewControllerName {
     
-    static let kDashboardVC = "DashboardVC"
+    static let kRosterDutiesVC = "RosterDutiesVC"
+    static let kRosterDutyDetailVC = "RosterDutyDetailVC"
 }
 
 //MARK: - Cell Identifiers
 enum CellIdentifiers {
     
-    static let kCellPopularMovies = "CellPopularMovies"
+    static let kCellRosterDuties = "CellRosterDuties"
+    static let kCellNoRosterDuties = "CellNoRosterDuties"
 }
 
 //MARK: - Message's
@@ -113,13 +116,9 @@ enum AlertMessage {
 //MARK: - Web Service URLs
 enum WebServiceURL {
     
-    static let mainURL = "https://api.themoviedb.org/3/"
+    static let mainURL = "https://rosterbuster.aero/wp-content/uploads/"
     
-    static let moviesListURL = mainURL + "movie/now_playing?"
-    
-    //Load Backdrop & Poster Image
-    static let loadBackDropURL = "https://image.tmdb.org/t/p/original"
-    static let loadPosterURL = "https://image.tmdb.org/t/p/w342"
+    static let rosterDutiesURL = mainURL + "dummy-response.json"
 }
 
 //MARK: - Web Service Parameters
@@ -168,10 +167,4 @@ enum DateAndTimeFormatString {
     static let strDateFormate_dd = "dd"
     static let strDateFormate_MM = "MM"
     static let strDateFormate_yyyy = "yyyy"
-}
-
-//MARK: - Movie List API Key
-enum MovieListAPIKey {
-    
-    static let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
 }

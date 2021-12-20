@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = true
         
         //Set Root ViewController Integration
-        Utility().setRootDashboardVC()
+        Utility().setRootRosterDutiesVC()
         
         return true
     }

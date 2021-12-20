@@ -4,10 +4,11 @@
 target 'CAE-Practical' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
+  pod 'FontAwesome.swift'
   pod 'IQKeyboardManagerSwift'
   pod 'MBProgressHUD'
   pod 'SDWebImage'
- pod 'Toast-Swift'
-
+  pod 'Toast-Swift'
+  
 end

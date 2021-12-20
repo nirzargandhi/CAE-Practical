@@ -56,7 +56,7 @@ class ApiCall: NSObject {
             
             let decoder = JSONDecoder()
             do {
-                if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: []) as? NSArray {
                     print(convertedJsonIntoDict)
                 }
                 
@@ -66,9 +66,8 @@ class ApiCall: NSObject {
                         completion(true, dictResponse as AnyObject)
                     }
                 } else {
-                    let dictResponse = try decoder.decode(GeneralResponseModal.self, from: data)
                     mainThread {
-                        completion(false, dictResponse.status_message as AnyObject)
+                        completion(false, AlertMessage.msgError as AnyObject)
                     }
                 }
                 
@@ -112,7 +111,7 @@ class ApiCall: NSObject {
             
             let decoder = JSONDecoder()
             do {
-                if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: []) as? NSArray {
                     print(convertedJsonIntoDict)
                 }
                 
@@ -122,9 +121,8 @@ class ApiCall: NSObject {
                         completion(true, dictResponse as AnyObject)
                     }
                 } else {
-                    let dictResponse = try decoder.decode(GeneralResponseModal.self, from: data)
                     mainThread {
-                        completion(false, dictResponse.status_message as AnyObject)
+                        completion(false, AlertMessage.msgError as AnyObject)
                     }
                 }
                 
@@ -167,7 +165,7 @@ class ApiCall: NSObject {
             
             let decoder = JSONDecoder()
             do {
-                if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: []) as? NSArray {
                     print(convertedJsonIntoDict)
                 }
                 
@@ -177,9 +175,8 @@ class ApiCall: NSObject {
                         completion(true, dictResponse as AnyObject)
                     }
                 } else {
-                    let dictResponse = try decoder.decode(GeneralResponseModal.self, from: data)
                     mainThread {
-                        completion(false, dictResponse.status_message as AnyObject)
+                        completion(false, AlertMessage.msgError as AnyObject)
                     }
                 }
                 
@@ -198,38 +195,5 @@ class ApiCall: NSObject {
             }
         })
         task.resume()
-    }
-}
-
-//MARK: - GeneralResponseModal Class
-struct GeneralResponseModal : Codable {
-    let status_code : Int?
-    let status_message : String?
-    let success : Bool?
-    let page : Int?
-    let results : [String]?
-    let total_pages : Int?
-    let total_results : Int?
-    
-    enum CodingKeys: String, CodingKey {
-        
-        case status_code = "status_code"
-        case status_message = "status_message"
-        case success = "success"
-        case page = "page"
-        case results = "results"
-        case total_pages = "total_pages"
-        case total_results = "total_results"
-    }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        status_code = try values.decodeIfPresent(Int.self, forKey: .status_code)
-        status_message = try values.decodeIfPresent(String.self, forKey: .status_message)
-        success = try values.decodeIfPresent(Bool.self, forKey: .success)
-        page = try values.decodeIfPresent(Int.self, forKey: .page)
-        results = try values.decodeIfPresent([String].self, forKey: .results)
-        total_pages = try values.decodeIfPresent(Int.self, forKey: .total_pages)
-        total_results = try values.decodeIfPresent(Int.self, forKey: .total_results)
     }
 }

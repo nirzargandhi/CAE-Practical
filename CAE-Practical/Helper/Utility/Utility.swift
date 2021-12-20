@@ -67,10 +67,10 @@ struct Utility {
         return false
     }
     
-    //MARK: - Set Root DashboardVC Method
-    func setRootDashboardVC() {
-        let objDashboardVC = AllStoryBoard.Main.instantiateViewController(withIdentifier: ViewControllerName.kDashboardVC) as? DashboardVC
-        let navigationViewController = UINavigationController(rootViewController: objDashboardVC!)
+    //MARK: - Set Root RosterDutiesVC Method
+    func setRootRosterDutiesVC() {
+        let objRosterDutiesVC = AllStoryBoard.Main.instantiateViewController(withIdentifier: ViewControllerName.kRosterDutiesVC) as? RosterDutiesVC
+        let navigationViewController = UINavigationController(rootViewController: objRosterDutiesVC!)
         GlobalConstants.appDelegate.window!.rootViewController = navigationViewController
         GlobalConstants.appDelegate.window?.makeKeyAndVisible()
     }

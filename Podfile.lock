@@ -1,4 +1,5 @@
 PODS:
+  - FontAwesome.swift (1.9.1)
   - IQKeyboardManagerSwift (6.5.9)
   - MBProgressHUD (1.2.0)
   - SDWebImage (5.12.1):
@@ -7,6 +8,7 @@ PODS:
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
+  - FontAwesome.swift
   - IQKeyboardManagerSwift
   - MBProgressHUD
   - SDWebImage
@@ -14,17 +16,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - FontAwesome.swift
     - IQKeyboardManagerSwift
     - MBProgressHUD
     - SDWebImage
     - Toast-Swift
 
 SPEC CHECKSUMS:
+  FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: c5dd2f5cf401a3230f6c02367e5d9ab601b9edf1
+PODFILE CHECKSUM: 0eeabeecc2b9c53560f9321c2271655255a6dc1a
 
 COCOAPODS: 1.11.2
