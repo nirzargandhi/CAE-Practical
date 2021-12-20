@@ -16,6 +16,7 @@
 		E6E3F9A727703DAE006B0D26 /* CAE_PracticalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E3F9A627703DAE006B0D26 /* CAE_PracticalTests.swift */; };
 		E6E3F9B127703DAE006B0D26 /* CAE_PracticalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E3F9B027703DAE006B0D26 /* CAE_PracticalUITests.swift */; };
 		E6E3F9B327703DAE006B0D26 /* CAE_PracticalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E3F9B227703DAE006B0D26 /* CAE_PracticalUITestsLaunchTests.swift */; };
+		F501B48E6ECB76F741BB08D9 /* Pods_CAE_Practical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF9D44631F7B8EE016FC6E1 /* Pods_CAE_Practical.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24D6F5A527CEBBA2002530D6 /* Pods-CAE-Practical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAE-Practical.debug.xcconfig"; path = "Target Support Files/Pods-CAE-Practical/Pods-CAE-Practical.debug.xcconfig"; sourceTree = "<group>"; };
+		8CF9D44631F7B8EE016FC6E1 /* Pods_CAE_Practical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CAE_Practical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		939C135AF6FF9EB8B45A73BC /* Pods-CAE-Practical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAE-Practical.release.xcconfig"; path = "Target Support Files/Pods-CAE-Practical/Pods-CAE-Practical.release.xcconfig"; sourceTree = "<group>"; };
 		E6E3F98C27703DAB006B0D26 /* CAE-Practical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CAE-Practical.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E3F98F27703DAB006B0D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E3F99127703DAB006B0D26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F501B48E6ECB76F741BB08D9 /* Pods_CAE_Practical.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		375DC9330BC94F9F1EEFBB66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CF9D44631F7B8EE016FC6E1 /* Pods_CAE_Practical.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1D6256E768F180E408A80AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24D6F5A527CEBBA2002530D6 /* Pods-CAE-Practical.debug.xcconfig */,
+				939C135AF6FF9EB8B45A73BC /* Pods-CAE-Practical.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E6E3F98327703DAB006B0D26 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,8 @@
 				E6E3F9A527703DAE006B0D26 /* CAE-PracticalTests */,
 				E6E3F9AF27703DAE006B0D26 /* CAE-PracticalUITests */,
 				E6E3F98D27703DAB006B0D26 /* Products */,
+				E1D6256E768F180E408A80AA /* Pods */,
+				375DC9330BC94F9F1EEFBB66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6E3F9B627703DAE006B0D26 /* Build configuration list for PBXNativeTarget "CAE-Practical" */;
 			buildPhases = (
+				5A0ABB0B103EA9227138C78B /* [CP] Check Pods Manifest.lock */,
 				E6E3F98827703DAB006B0D26 /* Sources */,
 				E6E3F98927703DAB006B0D26 /* Frameworks */,
 				E6E3F98A27703DAB006B0D26 /* Resources */,
+				362565C53D7E4A09ADF6700E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		362565C53D7E4A09ADF6700E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CAE-Practical/Pods-CAE-Practical-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CAE-Practical/Pods-CAE-Practical-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CAE-Practical/Pods-CAE-Practical-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A0ABB0B103EA9227138C78B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CAE-Practical-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E6E3F98827703DAB006B0D26 /* Sources */ = {
@@ -434,6 +503,7 @@
 		};
 		E6E3F9B727703DAE006B0D26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24D6F5A527CEBBA2002530D6 /* Pods-CAE-Practical.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +532,7 @@
 		};
 		E6E3F9B827703DAE006B0D26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 939C135AF6FF9EB8B45A73BC /* Pods-CAE-Practical.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
