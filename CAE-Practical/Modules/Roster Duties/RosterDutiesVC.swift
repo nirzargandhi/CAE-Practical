@@ -5,9 +5,6 @@
 //  Created by Nirzar Gandhi on 20/12/21.
 //
 
-import FontAwesome_swift
-import UIKit
-
 class RosterDutiesVC: UIViewController {
     
     //MARK: - UITableView Outlet
@@ -58,6 +55,11 @@ class RosterDutiesVC: UIViewController {
     func wsRosterDuties(isLoader : Bool) {
         
         guard case ConnectionCheck.isConnectedToNetwork() = true else {
+            
+            self.showOfflineRosterDutiesData()
+            
+            self.refreshControl.endRefreshing()
+            
             self.view.makeToast(AlertMessage.msgNetworkConnection)
             return
         }
@@ -67,6 +69,8 @@ class RosterDutiesVC: UIViewController {
                 self.arrRosterDuties = responseData
                 
                 if self.arrRosterDuties?.count ?? 0 > 0 {
+                    
+                    self.storeOfflineRosterDutiesData()
                     
                     let strCurrentDate = Utility().datetimeFormatter(strFormat: DateAndTimeFormatString.strDateFormate_ddMMyyyy, isTimeZoneUTC: false).string(from: Date())
                     
@@ -102,6 +106,104 @@ class RosterDutiesVC: UIViewController {
                     self.refreshControl.endRefreshing()
                 }
             }
+        }
+    }
+    
+    //MARK: - Store Offline Roster Duties Data Method
+    func storeOfflineRosterDutiesData() {
+        
+        let isAllDataDeleted = OfflineRosterDutiesDBManager.getInstance().deleteAllRosterDutiesData()
+        
+        if isAllDataDeleted {
+            print("Roster Duties all data deleted successful")
+        } else {
+            print("Roster Duties all data deleted fail")
+        }
+        
+        var isDataInserted = false
+        
+        for i in 0..<(arrRosterDuties?.count ?? 0) {
+            
+            let dictOfflineRosterDuties : OfflineRosterDutiesModel = OfflineRosterDutiesModel()
+            
+            dictOfflineRosterDuties.flightnr = arrRosterDuties?[i].flightnr ?? ""
+            dictOfflineRosterDuties.date = arrRosterDuties?[i].date ?? ""
+            dictOfflineRosterDuties.aircraft_type = arrRosterDuties?[i].aircraft_type ?? ""
+            dictOfflineRosterDuties.tail = arrRosterDuties?[i].tail ?? ""
+            dictOfflineRosterDuties.departure = arrRosterDuties?[i].departure ?? ""
+            dictOfflineRosterDuties.destination = arrRosterDuties?[i].destination ?? ""
+            dictOfflineRosterDuties.time_Depart = arrRosterDuties?[i].time_Depart ?? ""
+            dictOfflineRosterDuties.time_Arrive = arrRosterDuties?[i].time_Arrive ?? ""
+            dictOfflineRosterDuties.dutyID = arrRosterDuties?[i].dutyID ?? ""
+            dictOfflineRosterDuties.dutyCode = arrRosterDuties?[i].dutyCode ?? ""
+            dictOfflineRosterDuties.captain = arrRosterDuties?[i].captain ?? ""
+            dictOfflineRosterDuties.first_officer = arrRosterDuties?[i].first_officer ?? ""
+            dictOfflineRosterDuties.flight_attendant = arrRosterDuties?[i].flight_attendant ?? ""
+            
+            isDataInserted = OfflineRosterDutiesDBManager.getInstance().addRosterDutiesData(objOfflineRosterDuties: dictOfflineRosterDuties)
+        }
+        
+        if isDataInserted {
+            print("Roster Duties insert successful")
+        } else {
+            print("Roster Duties insert fail")
+        }
+    }
+    
+    //MARK: - Show Offline Roster Duties Data Method
+    func showOfflineRosterDutiesData() {
+        
+        var arrOfflineRosterDuties = [OfflineRosterDutiesModel]()
+        arrOfflineRosterDuties = OfflineRosterDutiesDBManager.getInstance().getAllRosterDutiesData()
+        
+        var arrTempRosterDuties = [RosterDutiesModel]()
+        
+        for i in 0..<arrOfflineRosterDuties.count {
+            
+            var dictRosterDuties = RosterDutiesModel()
+            
+            dictRosterDuties.flightnr = arrOfflineRosterDuties[i].flightnr ?? ""
+            dictRosterDuties.date = arrOfflineRosterDuties[i].date ?? ""
+            dictRosterDuties.aircraft_type = arrOfflineRosterDuties[i].aircraft_type ?? ""
+            dictRosterDuties.tail = arrOfflineRosterDuties[i].tail ?? ""
+            dictRosterDuties.departure = arrOfflineRosterDuties[i].departure ?? ""
+            dictRosterDuties.destination = arrOfflineRosterDuties[i].destination ?? ""
+            dictRosterDuties.time_Depart = arrOfflineRosterDuties[i].time_Depart ?? ""
+            dictRosterDuties.time_Arrive = arrOfflineRosterDuties[i].time_Arrive ?? ""
+            dictRosterDuties.dutyID = arrOfflineRosterDuties[i].dutyID ?? ""
+            dictRosterDuties.dutyCode = arrOfflineRosterDuties[i].dutyCode ?? ""
+            dictRosterDuties.captain = arrOfflineRosterDuties[i].captain ?? ""
+            dictRosterDuties.first_officer = arrOfflineRosterDuties[i].first_officer ?? ""
+            dictRosterDuties.flight_attendant = arrOfflineRosterDuties[i].flight_attendant ?? ""
+            
+            arrTempRosterDuties.append(dictRosterDuties)
+        }
+        
+        arrRosterDuties = arrTempRosterDuties
+        
+        if arrRosterDuties?.count ?? 0 > 0 {
+            
+            let strCurrentDate = Utility().datetimeFormatter(strFormat: DateAndTimeFormatString.strDateFormate_ddMMyyyy, isTimeZoneUTC: false).string(from: Date())
+            
+            arrDateTblHeader = [String]()
+            
+            for i in 0..<(arrRosterDuties?.count ?? 0) {
+                if !arrDateTblHeader.contains(where: {$0 == arrRosterDuties?[i].date ?? ""}) {
+                    arrDateTblHeader.append(arrRosterDuties?[i].date ?? "")
+                }
+            }
+            
+            arrDateTblHeader.append(strCurrentDate)
+            
+            arrDateTblHeader = arrDateTblHeader.reversed()
+            
+            tblRosterDuties.reloadData()
+            
+            tblRosterDuties.isHidden = false
+            lblNoData.isHidden = true
+        } else {
+            lblNoData.isHidden = false
+            tblRosterDuties.isHidden = true
         }
     }
 }

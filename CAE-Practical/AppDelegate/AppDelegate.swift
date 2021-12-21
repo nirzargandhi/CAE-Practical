@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = true
         
+        //Copying Database to Document Directory
+        Utility().copyFile(fileName: "RosterDuties.sqlite")
+        
         //Set Root ViewController Integration
         Utility().setRootRosterDutiesVC()
         

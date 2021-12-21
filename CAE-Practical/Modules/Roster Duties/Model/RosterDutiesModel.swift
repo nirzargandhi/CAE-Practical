@@ -6,19 +6,19 @@
 //
 
 struct RosterDutiesModel : Codable {
-    let flightnr : String?
-    let date : String?
-    let aircraft_type : String?
-    let tail : String?
-    let departure : String?
-    let destination : String?
-    let time_Depart : String?
-    let time_Arrive : String?
-    let dutyID : String?
-    let dutyCode : String?
-    let captain : String?
-    let first_officer : String?
-    let flight_attendant : String?
+    var flightnr : String?
+    var date : String?
+    var aircraft_type : String?
+    var tail : String?
+    var departure : String?
+    var destination : String?
+    var time_Depart : String?
+    var time_Arrive : String?
+    var dutyID : String?
+    var dutyCode : String?
+    var captain : String?
+    var first_officer : String?
+    var flight_attendant : String?
     
     enum CodingKeys: String, CodingKey {
         
@@ -37,6 +37,7 @@ struct RosterDutiesModel : Codable {
         case flight_attendant = "Flight Attendant"
     }
     
+    /*
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         flightnr = try values.decodeIfPresent(String.self, forKey: .flightnr)
@@ -53,4 +54,5 @@ struct RosterDutiesModel : Codable {
         first_officer = try values.decodeIfPresent(String.self, forKey: .first_officer)
         flight_attendant = try values.decodeIfPresent(String.self, forKey: .flight_attendant)
     }
+    */
 }

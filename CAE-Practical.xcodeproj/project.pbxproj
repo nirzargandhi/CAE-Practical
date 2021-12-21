@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E63C46B727718A0F000BD89C /* OfflineRosterDutiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C46B627718A0F000BD89C /* OfflineRosterDutiesModel.swift */; };
+		E63C46BA27718A6D000BD89C /* RosterDuties.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E63C46B927718A6D000BD89C /* RosterDuties.sqlite */; };
+		E63C46BC27718A8D000BD89C /* OfflineRosterDutiesDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C46BB27718A8D000BD89C /* OfflineRosterDutiesDBManager.swift */; };
 		E693D80E2770A9A60025C6FA /* RosterDutyDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E693D80D2770A9A60025C6FA /* RosterDutyDetailVC.swift */; };
 		E6D321AE27704B230067B760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6D321AD27704B230067B760 /* Main.storyboard */; };
 		E6D321E827704B500067B760 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D321B327704B500067B760 /* ApiCall.swift */; };
@@ -83,6 +86,9 @@
 		24D6F5A527CEBBA2002530D6 /* Pods-CAE-Practical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAE-Practical.debug.xcconfig"; path = "Target Support Files/Pods-CAE-Practical/Pods-CAE-Practical.debug.xcconfig"; sourceTree = "<group>"; };
 		8CF9D44631F7B8EE016FC6E1 /* Pods_CAE_Practical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CAE_Practical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939C135AF6FF9EB8B45A73BC /* Pods-CAE-Practical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CAE-Practical.release.xcconfig"; path = "Target Support Files/Pods-CAE-Practical/Pods-CAE-Practical.release.xcconfig"; sourceTree = "<group>"; };
+		E63C46B627718A0F000BD89C /* OfflineRosterDutiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineRosterDutiesModel.swift; sourceTree = "<group>"; };
+		E63C46B927718A6D000BD89C /* RosterDuties.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = RosterDuties.sqlite; sourceTree = "<group>"; };
+		E63C46BB27718A8D000BD89C /* OfflineRosterDutiesDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineRosterDutiesDBManager.swift; sourceTree = "<group>"; };
 		E693D80D2770A9A60025C6FA /* RosterDutyDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterDutyDetailVC.swift; sourceTree = "<group>"; };
 		E6D321AD27704B230067B760 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E6D321B327704B500067B760 /* ApiCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
@@ -186,6 +192,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E63C46B5277189F1000BD89C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				E63C46B827718A53000BD89C /* Model */,
+				E63C46BB27718A8D000BD89C /* OfflineRosterDutiesDBManager.swift */,
+				E63C46B927718A6D000BD89C /* RosterDuties.sqlite */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		E63C46B827718A53000BD89C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E63C46B627718A0F000BD89C /* OfflineRosterDutiesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E693D80C2770A98E0025C6FA /* Roster Duty Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +248,7 @@
 			children = (
 				E6D321B227704B500067B760 /* ApiCall */,
 				E6D321CC27704B500067B760 /* Constants */,
+				E63C46B5277189F1000BD89C /* Database */,
 				E6D321B827704B500067B760 /* Extension */,
 				E6D321D527704B500067B760 /* Fonts */,
 				E6D321E027704B500067B760 /* HeaderFile */,
@@ -551,6 +576,7 @@
 				E6D3220927704B500067B760 /* OpenSans-Bold.ttf in Resources */,
 				E6D3220527704B500067B760 /* OpenSans-Light.ttf in Resources */,
 				E6D3220D27704B500067B760 /* OpenSans-BoldItalic.ttf in Resources */,
+				E63C46BA27718A6D000BD89C /* RosterDuties.sqlite in Resources */,
 				E6D3220827704B500067B760 /* OpenSans-LightItalic.ttf in Resources */,
 				E6D3220B27704B500067B760 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				E6D3221027704B500067B760 /* Color.xcassets in Resources */,
@@ -631,6 +657,7 @@
 				E6D321F227704B500067B760 /* UITextFieldExtension.swift in Sources */,
 				E6D321FC27704B500067B760 /* OptionalExtensions.swift in Sources */,
 				E6D321F327704B500067B760 /* DictionaryExtensions.swift in Sources */,
+				E63C46BC27718A8D000BD89C /* OfflineRosterDutiesDBManager.swift in Sources */,
 				E6D321E927704B500067B760 /* MultiPart.swift in Sources */,
 				E6D321FA27704B500067B760 /* IntExtensions.swift in Sources */,
 				E6D321EC27704B500067B760 /* ArrayExtensions.swift in Sources */,
@@ -652,6 +679,7 @@
 				E6D3220E27704B500067B760 /* NotificationDelegate.swift in Sources */,
 				E6D3220F27704B500067B760 /* Utility.swift in Sources */,
 				E6D321EE27704B500067B760 /* FloatExtensions.swift in Sources */,
+				E63C46B727718A0F000BD89C /* OfflineRosterDutiesModel.swift in Sources */,
 				E6D3221B27706A550067B760 /* RosterDutiesTVC.swift in Sources */,
 				E693D80E2770A9A60025C6FA /* RosterDutyDetailVC.swift in Sources */,
 				E6D321F927704B500067B760 /* MonthYearPickerView.swift in Sources */,
